@@ -47,6 +47,21 @@ const data = [
 				value: 20,
 				scale: 0.7,
 			},
+			{
+				title: 'Iscritti',
+				value: 630,
+				scale: 0.03,
+			},
+			{
+				title: 'Views',
+				value: 12000,
+				scale: 0.0005,
+			},
+			{
+				title: 'Watch time',
+				value: 770,
+				scale: 0.01,
+			},
 		],
 	},
 	{
@@ -96,6 +111,21 @@ const data = [
 				title: 'Studio',
 				value: 0,
 				scale: 0.7,
+			},
+			{
+				title: 'Iscritti',
+				value: 0,
+				scale: 0.03,
+			},
+			{
+				title: 'Views',
+				value: 0,
+				scale: 0.0005,
+			},
+			{
+				title: 'Watch time',
+				value: 0,
+				scale: 0.01,
 			},
 		],
 	},
