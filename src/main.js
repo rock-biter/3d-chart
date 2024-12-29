@@ -78,7 +78,7 @@ year2024.columns.forEach((column, index) => {
  */
 const scene = new THREE.Scene()
 scene.fog = new THREE.Fog(0x000000, 10, 50) // Add fog to the scene
-// scene.background = new THREE.Color(0xdedede)
+scene.background = new THREE.Color(0x000000)
 
 // __box__
 /**
@@ -112,9 +112,9 @@ const sizes = {
 /**
  * Camera
  */
-const fov = 60
+const fov = 75
 const camera = new THREE.PerspectiveCamera(fov, sizes.width / sizes.height, 0.1)
-camera.position.set(1, 4, 8)
+camera.position.set(0, 4, 6)
 // camera.lookAt(new THREE.Vector3(0, 2.5, 0))
 
 /**
@@ -145,8 +145,8 @@ controls.target.set(0, 2.5, 0)
 /**
  * Lights
  */
-const ambientLight = new THREE.AmbientLight(0xffffff, 1.5)
-const directionalLight = new THREE.DirectionalLight(0xffffff, 4.5)
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
+const directionalLight = new THREE.DirectionalLight(0xffffff, 2.5)
 directionalLight.position.set(3, 10, 7)
 scene.add(ambientLight, directionalLight)
 
@@ -282,13 +282,13 @@ function create3DChart(data) {
 					)
 					yearGroup.add(valueTextMesh)
 
-					const buttonColor = 'coral'
+					const buttonColor = 'black' //0x121212
 
 					// Add 3D button to slide the camera, except for the last column
 					if (columnIndex < yearData.columns.length - 1) {
 						const buttonGeometry = new THREE.ConeGeometry(
 							barWidth / 3,
-							barWidth / 2,
+							barWidth / 1.5,
 							20
 						)
 						buttonGeometry.rotateZ(-Math.PI / 2)
@@ -310,7 +310,7 @@ function create3DChart(data) {
 					if (columnIndex > 0) {
 						const buttonGeometry = new THREE.ConeGeometry(
 							barWidth / 3,
-							barWidth / 2,
+							barWidth / 1.5,
 							20
 						)
 						buttonGeometry.rotateZ(Math.PI / 2)
